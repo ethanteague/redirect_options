@@ -5,7 +5,7 @@ Provides functionality for adding redirect type info to redirects by taxonomy ba
 ### Motivation
 Va.gov has several legacy redirects that need to be migrated into drupal. Some are server level, some are template based.
 Va.gov uses a headless setup with graphql queries generated for consumption via metalsmith frontend. In the redirect query,
-information about the original redirect source is required, so this module associates a new vaocabulary taxonomy term to indicate
+information about the original redirect source is required, so this module associates a new vocabulary taxonomy term to indicate
 redirect type with each redirect.
 
 ### What it does
