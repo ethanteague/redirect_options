@@ -23,18 +23,17 @@ function redirect_options_install() {
 
   // Term names to be added - if already exists no error thrown, so okay
   // to avoid the checking overhead.
-  $items = [
-    'Template',
-    'Server',
-  ];
+  Term::create([
+    'parent' => [],
+    'name' => 'Template',
+    'vid' => 'type_of_redirect',
+  ])->save();
 
-  foreach ($items as $item) {
-    $term = Term::create([
-      'parent' => [],
-      'name' => $item,
-      'vid' => 'type_of_redirect',
-    ])->save();
-  }
+  Term::create([
+    'parent' => [],
+    'name' => 'Server',
+    'vid' => 'type_of_redirect',
+  ])->save();
 }
 
 /**
