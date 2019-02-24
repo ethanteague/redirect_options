@@ -1,0 +1,7 @@
+name: 'Redirect Options'
+type: module
+description: 'Adds options to redirects form'
+core: 8.x
+package: 'redirect_options'
+dependencies:
+  - redirect
