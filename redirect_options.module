@@ -28,7 +28,7 @@ function redirect_options_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_form_form_alter().
  */
 function redirect_options_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if (in_array('redirect-form', $form['#attributes']['class'])) {
+  if (is_array($form['#attributes']) && array_key_exists('class', $form['#attributes']) && in_array('redirect-form', $form['#attributes']['class'])) {
     $vid = 'type_of_redirect';
     $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
     foreach ($terms as $term) {
